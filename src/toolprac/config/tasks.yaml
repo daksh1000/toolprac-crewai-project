@@ -1,0 +1,39 @@
+draft_advisory_email:
+  description: >
+    Read the user's preferences from the knowledge/user_preference.txt file.
+    Then, write a personalized, insightful email that provides advice on {topic}.
+    The email should be clear, empathetic, and include actionable steps or resources.
+    
+    The email should include:
+    1. A clear explanation of the key points related to the topic.
+    2. A supportive and encouraging tone.
+    
+    Email requirements:
+    - Subject line should be relevant to the topic.
+    - Length: 150-250 words.
+    - Include at least one actionable suggestion or resource.
+    - Sign the email with the name "Daksh"
+    
+  expected_output: >
+    A complete, formatted email ready to be sent, including:
+    - A clear and relevant subject line.
+    - Well-structured, insightful email content.
+
+  agent: Email_agent
+
+format_and_send_email:
+  description: >
+    Take the email content from the 'draft_advisory_email' task and format it into a beautiful HTML email.
+    Use colors, spacing, and other HTML elements to make the email visually appealing and easy to read.
+    Once the email is formatted, send it to the recipient.
+
+    Recipient email: rentalgo511@gmail.com
+
+  expected_output: >
+    Confirmation that the beautifully formatted email has been sent to the recipient.
+
+  agent: Email_Formatter_Agent
+  output_file: output/mail.md
+
+  context:
+    - draft_advisory_email
