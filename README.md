@@ -1,6 +1,6 @@
 # Toolprac Crew
 
-Welcome to the Toolprac Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the Toolprac Crew project, powered by [crewAI](https://crewai.com). This project demonstrates a multi-agent AI system designed to generate personalized, insightful emails and then format and send them. It leverages the powerful and flexible framework provided by crewAI to enable agents to collaborate effectively on this task, maximizing their collective intelligence and capabilities.
 
 ## Installation
 
@@ -35,13 +35,16 @@ To kickstart your crew of AI agents and begin task execution, run this from the 
 $ crewai run
 ```
 
-This command initializes the toolprac Crew, assembling the agents and assigning them tasks as defined in your configuration.
-
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+This command initializes the Toolprac Crew, assembling the agents and assigning them tasks as defined in your configuration. You will be prompted to enter a topic for the motivational email. The crew will then draft, format, and send the email.
 
 ## Understanding Your Crew
 
-The toolprac Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+The Toolprac Crew is composed of two main AI agents:
+
+- **Email_agent**: An expert in providing clear, insightful, and supportive advice. This agent drafts personalized, empathetic emails based on user preferences and a given topic.
+- **Email_Formatter_Agent**: An expert in HTML and CSS email design. This agent transforms plain text emails into visually appealing and engaging HTML emails and handles the sending process.
+
+These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve the objective of sending well-crafted advisory emails. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
 ## Support
 
